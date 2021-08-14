@@ -38,6 +38,10 @@ nav {
   a:hover {
     color: $white;
   }
+
+  .logo {
+    margin-left: 0;
+  }
 }
 
 header {
@@ -48,8 +52,9 @@ header {
   img {
     display: block;
     margin: 0 auto 50px auto;
-    width: 45%;
-    height: 45%;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
   }
 
   h1 {
@@ -117,6 +122,23 @@ main {
   text-align: center;
 }
 
+
+.productive {
+  margin: 130px 60px 130px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    width: auto\2; /* ie8 */
+  }
+}
+
+
+
+
 // footer
 
 footer {
@@ -135,22 +157,26 @@ footer {
 @media (max-width: 850px) {
   header {
     top: 0;
+    
+    img {      
+      padding: 0 60px 0 60px;
+    }
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   nav {
     padding: 30px;
     display: flex;
     justify-content: space-between;
-  
+
     img {
       width: 90px;
       height: 26px;
     }
 
     a {
-      margin-left: 10px;      
+      margin-left: 10px;
     }
   }
 
@@ -170,6 +196,11 @@ footer {
   .feature-container {
     grid-template-columns: 1fr;
   }
+
+  .productive {
+    margin: 130px 60px 130px 60px;    
+    grid-template-columns: 1fr;    
+  }
 }
 
 @media (max-width: 410px) {
@@ -178,7 +209,14 @@ footer {
   }
 
   .feature-container {
-    margin-top: -103px;
+    margin-top: -105px;
+  }
+
+  .feature-item {
+    img {
+      height: 30%;
+      width: 30%;
+    }
   }
 
   .feature-item:nth-of-type(1) {

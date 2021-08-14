@@ -35,6 +35,9 @@ nav a {
 nav a:hover {
   color: white;
 }
+nav .logo {
+  margin-left: 0;
+}
 
 header {
   margin: -90px;
@@ -44,8 +47,10 @@ header {
 header img {
   display: block;
   margin: 0 auto 50px auto;
-  width: 45%;
-  height: 45%;
+  max-width: 100%;
+  height: auto;
+  width: auto\9 ;
+  /* ie8 */
 }
 header h1 {
   display: flex;
@@ -107,6 +112,19 @@ main {
   text-align: center;
 }
 
+.productive {
+  margin: 130px 60px 130px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.productive img {
+  max-width: 100%;
+  height: auto;
+  width: auto\2 ;
+  /* ie8 */
+}
+
 footer {
   background-color: magenta;
   padding: 60px 30px 40px 30px;
@@ -121,8 +139,11 @@ footer {
   header {
     top: 0;
   }
+  header img {
+    padding: 0 60px 0 60px;
+  }
 }
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   nav {
     padding: 30px;
     display: flex;
@@ -150,6 +171,11 @@ footer {
   .feature-container {
     grid-template-columns: 1fr;
   }
+
+  .productive {
+    margin: 130px 60px 130px 60px;
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 410px) {
   nav {
@@ -157,7 +183,12 @@ footer {
   }
 
   .feature-container {
-    margin-top: -103px;
+    margin-top: -105px;
+  }
+
+  .feature-item img {
+    height: 30%;
+    width: 30%;
   }
 
   .feature-item:nth-of-type(1) {
