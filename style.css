@@ -1,0 +1,168 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  z-index: 2;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: white;
+}
+
+.top-page {
+  background-color: #1c2431;
+}
+
+nav {
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+nav a {
+  color: #868585;
+  text-decoration: none;
+  margin-left: 50px;
+  transition: all 0.3s;
+}
+nav a:hover {
+  color: white;
+}
+
+header {
+  margin: -90px;
+  position: relative;
+  top: 150px;
+}
+header img {
+  display: block;
+  margin: 0 auto 50px auto;
+  width: 45%;
+  height: 45%;
+}
+header h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+header p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+header .button-started {
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+header button {
+  color: white;
+  background-color: #339ecc;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+header button:hover {
+  background-color: #65e2d9;
+}
+
+.wave {
+  position: relative;
+  left: 0;
+  bottom: 100px;
+  width: 100vw;
+  margin: 0;
+  z-index: 1;
+}
+
+main {
+  background-color: #181f2b;
+}
+
+.feature-container {
+  margin-top: -120px;
+  padding: 0 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer {
+  background-color: magenta;
+  padding: 60px 30px 40px 30px;
+}
+
+@media (max-width: 1200px) {
+  header {
+    top: 50px;
+  }
+}
+@media (max-width: 850px) {
+  header {
+    top: 0;
+  }
+}
+@media (max-width: 700px) {
+  nav {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  nav img {
+    width: 90px;
+    height: 26px;
+  }
+  nav a {
+    margin-left: 10px;
+  }
+
+  header {
+    margin: 0;
+  }
+  header h1 {
+    font-size: 20px;
+    margin: 0 30px 40px 30px;
+  }
+  header p {
+    margin: 0 30px 40px 30px;
+  }
+
+  .feature-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 410px) {
+  nav {
+    padding: 10px 5px;
+  }
+
+  .feature-container {
+    margin-top: -103px;
+  }
+
+  .feature-item:nth-of-type(1) {
+    padding-top: 50px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
